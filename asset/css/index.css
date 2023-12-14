@@ -897,6 +897,8 @@ body {
         margin-top: 60rem;
         margin-left: 1rem;
         overflow: hidden;
+        display: flex;
+        justify-content: left;
     }
 
     .playerInformation1 {

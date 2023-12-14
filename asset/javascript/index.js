@@ -28,12 +28,12 @@ loginBtn.addEventListener('click', () => {
 
 // toggle fa-bar to show slibar
 
-var t = 1;
+var k = 1;
 function Bar(){
     const faShows = document.getElementsByClassName('sliBar');
     const iconS = document.getElementsByClassName('icon');
     const iconSoccers = document.getElementsByClassName('icon-soccer');
-        if( t == 1 ){
+        if( k == 1 ){
             for(faShow of faShows){
                 faShow.style.width = "6rem";
             }
@@ -43,7 +43,7 @@ function Bar(){
             for(iconSoccer of iconSoccers){
                 iconSoccer.style.display = "block";
             }
-            t = 2;
+            k = 2;
         }
         else{
             for(faShow of faShows){
@@ -55,6 +55,6 @@ function Bar(){
             for(iconSoccer of iconSoccers){
                 iconSoccer.style.display = "none";
             }
-            t = 1;
+            k = 1;
         }
 }

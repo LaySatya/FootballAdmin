@@ -507,7 +507,7 @@ body {
 
 
 
-@media (min-width: 420px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .card{
         width: 95%;
         /* margin-left: -4rem; */
