@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" />
+  <link rel="shortcut icon" type="image/x-icon" href="../asset/img/premieleague.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../asset/css/club.css" />
+  <link rel="stylesheet" href="../asset/css/index.css">
+  <title>Football Admin</title>
+</head>
+
+<body>
+  <div class="container-header" id="headerChange">
+    <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+    <div class="menuBar">
+      <img src="../asset/img/profile.jpg" alt="">
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="./football.html" id="firstItem">Matches</a>
+        </li>
+        <li>
+          <a href="./ticket.html">Tickets</a>
+        </li>
+        <li>
+          <a href="./statistic.html">Statistic</a>
+        </li>
+        <li>
+          <a href="./players.html">Players</a>
+        </li>
+      </ul>
+    </div>
+    <div class="searchBar">
+      <input type="input" id="searchInput" placeholder="Search matches..." />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="informationBar">
+      <i class="fa-regular fa-bell"></i>
+      <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <a href="./followers.html"><i class="fa-regular fa-heart"></i></a>
+      <div class="profile">
+        <img src="../asset/img/profile.jpg" alt="" id="imgChange" />
+      </div>
+      <label for="" id="nameChange">
+        Lay Satya <br />
+        <span>Football Player</span>
+      </label>
+      <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+      <div class="subLogin" id="subLoginShow">
+        <ul id="profileShow">
+          <li>
+            <div class="profile1" id="switchAcc">
+              <img src="../asset/img/nha.jpg" alt="" id="pic1" />
+            </div>
+            <label for="" id="nameChange1">
+              Lay Sopanha <br />
+              <!-- <span id="playerChange">Football Player</span> -->
+            </label>
+          </li>
+          <li>
+            <div class="profile2">
+              <img src="../asset/img/pich.jpg" alt="" id="pic2" />
+            </div>
+            <label for="" id="nameChange2">
+              Narin Pich <br />
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+          <li>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <label for="" id="nameChange2">
+              Log Out <br />
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- slibar -->
+
+  <div class="sliBar" id="barShow">
+    <div class="line"></div>
+    <a href="../index.html">
+      <div class="icon" id="firstIcon">
+        <i class="fa-solid fa-gauge"></i> <span>Dash</span>
+      </div>
+    </a>
+    <a href="./users.html">
+      <div class="icon">
+        <i class="fa-solid fa-user-group"></i> <span>Users</span>
+      </div>
+    </a>
+    <a href="./statistic.html">
+      <div class="icon">
+        <i class="fa-solid fa-chart-simple"></i> <span>Charts</span>
+      </div>
+    </a>
+
+    <div class="line"></div>
+    <a href="./football.html">
+      <div class="icon-soccer" id="firstIcon-soccer">
+        <i class="fa-solid fa-futbol"></i> <span>Match</span>
+      </div>
+    </a>
+    <a href="./club.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-kaaba"></i> <span style="color: green;">Clubs</span>
+      </div>
+    </a>
+    <div class="icon-soccer">
+      <i class="fa-solid fa-sun" onclick="myModes()"></i> <span onclick="myModes()">Modes</span>
+    </div>
+    <a href="./setting.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-gears"></i> <span>Setting</span>
+      </div>
+    </a>
+  </div>
+  <div class="marquee">
+    <div class="marquee__inner">
+      <p class="marquee__line">About Stadiums</p>
+      <p class="marquee__line"></p>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/cityStadium.webp" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Manchester City
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/unitedStadium.webp" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Manchester United
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/liverpoolStadium.jpg" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 70%; object-fit: cover; width: 20rem;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Liverpool
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/bacelopVanue.webp" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Barcelona
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/parisStadium.jpg" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Paris
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/realStadium.jpg" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Real Madrid
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/spurStadium.webp" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Toteham Hotspur
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../asset/img/manichStadium.jpg" class="img-fluid rounded-start" alt="..." style="margin-top: 1.5rem; height: 65%">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 30px; font-weight: 600">
+            Bayorn Manich
+          </h5>
+          <p class="card-text">
+            The Etihad Stadium offers 14 high quality and unique event spaces
+            along with 66 executive boxes, ranging from the intimate to the
+            incredibly spacious.
+          </p>
+          <p class="card-text">
+            <small class="text-body-secondary">Last updated 3 mins ago</small>
+          </p>
+          <button type="button" class="btn btn-outline-success" style="float: right; width: 100px;">See More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../asset/javascript/index.js"></script>
+<script src="../asset/javascript/club.js"></script>
+</html>

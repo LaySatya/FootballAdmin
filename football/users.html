@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+    <link rel="shortcut icon" type="image/x-icon" href="../asset/img/premieleague.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/user.css">
+    <link rel="stylesheet" href="../asset/css/index.css">
+    <title>Football Admin</title>
+</head>
+
+<body>
+    <div class="container-header" id="headerChange">
+        <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+        <div class="menuBar">
+            <img src="../asset/img/profile.jpg" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="./football.html" id="firstItem">Matches</a>
+                </li>
+                <li>
+                    <a href="./ticket.html">Tickets</a>
+                </li>
+                <li>
+                    <a href="./statistic.html">Statistic</a>
+                </li>
+                <li>
+                    <a href="./players.html">Players</a>
+                </li>
+            </ul>
+        </div>
+        <div class="searchBar">
+            <input type="input" id="searchInput" placeholder="Search matches">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="informationBar">
+            <i class="fa-regular fa-bell"></i>
+            <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="./followers.html"><i class="fa-regular fa-heart"></i></a>
+            <div class="profile">
+                <img src="../asset/img/profile.jpg" alt="" id="imgChange">
+            </div>
+            <label for="" id="nameChange"> Lay Satya <br>
+                <span>Football Player</span>
+            </label>
+            <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+            <div class="subLogin" id="subLoginShow">
+                <ul id="profileShow">
+                    <li class="log">
+                        <div class="profile1" id="switchAcc">
+                            <img src="../asset/img/nha.jpg" alt="" id="pic1">
+                        </div>
+                        <label for="" id="nameChange1"> Lay Sopanha <br>
+                            <!-- <span id="playerChange">Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <div class="profile2">
+                            <img src="../asset/img/pich.jpg" alt="" id="pic2">
+                        </div>
+                        <label for="" id="nameChange2"> Narin Pich <br>
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <label for="" id="nameChange2"> Log Out <br>
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- slibar -->
+
+    <div class="sliBar" id="barShow">
+        <div class="line">
+
+        </div>
+        <a href="../index.html">
+            <div class="icon" id="firstIcon">
+                <i class="fa-solid fa-gauge" style="color: #212121 !important;"></i> <span>Dash</span>
+            </div>
+        </a>
+        <a href="./users.html">
+            <div class="icon">
+                <i class="fa-solid fa-user-group"></i> <span style="color: green">Users</span>
+            </div>
+        </a>
+        <a href="./statistic.html">
+            <div class="icon">
+                <i class="fa-solid fa-chart-simple"></i> <span>Charts</span>
+            </div>
+        </a>
+
+        <div class="line"></div>
+        <a href="./football.html">
+            <div class="icon-soccer" id="firstIcon-soccer">
+                <i class="fa-solid fa-futbol"></i> <span>Match</span>
+            </div>
+        </a>
+        <a href="./club.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-kaaba"></i> <span>Clubs</span>
+            </div>
+        </a>
+        <div class="icon-soccer">
+            <i class="fa-solid fa-sun" onclick="myModes()"></i> <span onclick="myModes()">Modes</span>
+        </div>
+        <a href="./setting.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-gears"></i> <span>Setting</span>
+            </div>
+        </a>
+    </div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="" class="d-block w-100" id="aaa" alt="Picture" style="height: 40rem;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="font-size: 50px;" class="lay"> &nbsp; </h5>
+
+                    <p style="font-size: 37px; font-weight: bold;">Student at Cambodia Academy Of Digital Technology</p>
+                </div>
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="../asset/img/nhaImg.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="font-size: 40px;">Narin Pich</h5>
+                    <p style="font-size: 30px;">Student at Cambodia Academy Of Digital Technology</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../asset/img/pich.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="font-size: 50px; ">Lay Sopanha</h5>
+                    <p style="font-size: 35px; ">Student at Cambodia Academy Of Digital Technology</p>
+                </div>
+            </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" onclick="next()"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+        <div class="marquee">
+        <div class="marquee__inner">
+            <p class="marquee__line"><i class="fa-solid fa-user-group" style="font-size: 30px; opacity: 1;"></i> Users
+            </p>
+            <p class="marquee__line"></p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="use">
+            <h3>Users and Emails</h3>
+        </div>
+        <!-- <a href=""> -->
+            <div class="create" id="addUser">
+                <h5>Add Users</h5>
+            </div>
+        <!-- </a> -->
+    </div>
+
+
+    <form class="row g-3 needs-validation" id="formAdd" novalidate>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">ID</label>
+          <input type="text" class="form-control" id="validationTooltip01"  value="" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip02" class="form-label">Name</label>
+          <input type="text" class="form-control" id="validationTooltip02"  value="" required>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            <input type="text" class="form-control" id="validationTooltipUsername"  aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Please choose a unique and valid username.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label" >Date</label>
+          <input type="date" class="form-control" id="validationTooltip03"  required>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip04" class="form-label">City</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="" id="choice">Choose...</option>
+            <option>Phnom Penh</option>
+            <option>California</option>
+            <option>Bangkok</option>
+          </select>
+          <div class="invalid-tooltip">
+            Please select a valid state.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip05" class="form-label">Picture</label>
+          <input type="file" class="form-control" id="validationTooltip05" required>
+          <div class="invalid-tooltip">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" id="btnClick" type="button">Submit User</button>
+        </div>
+      </form>
+
+
+
+
+    <table class="table" id="myTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">City</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+                <div class="userPro">
+                    <img src="../asset/img/profile.jpg" alt="">
+                </div>
+                &nbsp; Lay Satya
+            </td>
+            <td>satya.lay@student.cadt.edu.kh</td>
+            <td>Phnom Penh</td>
+            <td>2023-12-17</td>
+            <td>
+                <div class="online">
+
+                </div>
+                &nbsp;
+                Online
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+                <div class="userPro">
+                    <img src="../asset/img/nha.jpg" alt="">
+                </div>
+                &nbsp; Lay Sopanha
+            </td>
+            <td>sopanha.lay@student.cadt.edu.kh</td>
+            <td>Phnom Penh</td>
+            <td>2023-12-17</td>
+            <td>
+                <div class="online">
+
+                </div>
+                &nbsp;
+                Online
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td> 
+                <div class="userPro">
+                    <img src="../asset/img/pich.jpg" alt="">
+                </div>
+                &nbsp;  Narin Pich
+            </td>
+            <td>
+                narin.pic@student.cadt.edu.kh
+            </td>
+            <td>Phnom Penh</td>
+            <td>2023-12-17</td>
+            <td>
+                <div class="online">
+
+                </div>
+                &nbsp;
+                Online
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td> 
+                <div class="userPro">
+                    <img src="../asset/img/MESSI.jpg" alt="">
+                </div>
+                &nbsp;  Messi
+            </td>
+            <td>
+                Messi@student.cadt.edu.kh
+            </td>
+            <td>California</td>
+            <td>2023-12-17</td>
+            <td>
+                <div class="online">
+
+                </div>
+                &nbsp;
+                Online
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td> 
+                <div class="userPro">
+                    <img src="../asset/img/ronaldo.jpg" alt="">
+                </div>
+                &nbsp;  Ronaldo
+            </td>
+            <td>
+                Ronaldo@student.cadt.edu.kh
+            </td>
+            <td>California</td>
+            <td>2023-12-17</td>
+            <td>
+                <div class="online">
+
+                </div>
+                &nbsp;
+                Online
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+
+
+
+
+
+
+</body>
+
+<script src="../asset/javascript/user.js"></script>
+<script src="../asset/javascript/index.js"></script>
+</html>

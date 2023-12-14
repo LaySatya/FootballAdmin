@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+    <link rel="shortcut icon" type="image/x-icon" href="../asset/img/premieleague.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/football.css">
+    <link rel="stylesheet" href="../asset/css/index.css">
+    <title>Football Admin</title>
+</head>
+
+<body>
+    <div class="container-header" id="headerChange">
+        <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+        <div class="menuBar">
+            <img src="../asset/img/profile.jpg" alt="">
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#" id="firstItem" style="color: green; font-weight: 600;">Matches</a>
+                </li>
+                <li>
+                    <a href="./ticket.html" style="color: #212121; ">Tickets</a>
+                </li>
+                <li>
+                    <a href="./statistic.html" style="color: #212121;">Statistic</a>
+                </li>
+                <li>
+                    <a href="./players.html" style="color: #212121;">Players</a>
+                </li>
+            </ul>
+        </div>
+        <div class="searchBar">
+            <input type="input" id="searchInput" placeholder="Search matches...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="informationBar">
+            <i class="fa-regular fa-bell"></i>
+            <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="./followers.html"><i class="fa-regular fa-heart"></i></a>
+            <div class="profile">
+                <img src="../asset/img/profile.jpg" alt="" id="imgChange">
+            </div>
+            <label for="" id="nameChange"> Lay Satya <br>
+                <span>Football Player</span>
+            </label>
+            <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+            <div class="subLogin" id="subLoginShow">
+                <ul id="profileShow">
+                    <li class="log">
+                        <div class="profile1" id="switchAcc">
+                            <img src="../asset/img/nha.jpg" alt="" id="pic1">
+                        </div>
+                        <label for="" id="nameChange1"> Lay Sopanha <br>
+                            <!-- <span id="playerChange">Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <div class="profile2">
+                            <img src="../asset/img/pich.jpg" alt="" id="pic2">
+                        </div>
+                        <label for="" id="nameChange2"> Narin Pich <br>
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <label for="" id="nameChange2"> Log Out <br>
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- slibar -->
+
+    <div class="sliBar" id="barShow">
+        <div class="line">
+
+        </div>
+        <a href="../index.html">
+            <div class="icon" id="firstIcon">
+                <i class="fa-solid fa-gauge"></i> <span>Dash</span>
+            </div>
+        </a>
+        <a href="./users.html">
+            <div class="icon">
+                <i class="fa-solid fa-user-group"></i> <span>Users</span>
+            </div>
+        </a>
+        <a href="./statistic.html">
+            <div class="icon">
+                <i class="fa-solid fa-chart-simple"></i> <span>Charts</span>
+            </div>
+        </a>
+
+        <div class="line"></div>
+        <a href="./football.html">
+            <div class="icon-soccer" id="firstIcon-soccer">
+                <i class="fa-solid fa-futbol"></i> <span style="color: green">Match</span>
+            </div>
+        </a>
+        <a href="./club.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-kaaba"></i> <span>Clubs</span>
+            </div>
+        </a>
+        <div class="icon-soccer">
+            <i class="fa-solid fa-sun" onclick="myModes()"></i> <span onclick="myModes()">Modes</span>
+        </div>
+        <a href="./setting.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-gears"></i> <span onclick="myModes()">Setting</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- match near slibar -->
+
+    <div class="live-match">
+        <div class="match">
+            <h4>Live Matches</h4> <i class="fa-solid fa-caret-right"></i>
+            <div class="team-full">
+                <div class="team">
+                    <img src="../asset/img/manich.jpg" alt="">
+                </div>
+                <div class="result">
+                    <h3>
+                        8 : 2
+                    </h3>
+                </div>
+                <div class="team" id="firstTeam">
+                    <img src="../asset/img/bacelona1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="participant">
+            <h4>Teams</h4>
+            <div class="team-full1">
+                <div class="imgTeam">
+                    <img src="../asset/img/realmadrid.png" alt="">
+                </div>
+                <label for="">Real Madrid</label>
+                <i class="fa-solid fa-chart-simple" id="chart" style="color: goldenrod;"></i>
+            </div>
+            <div class="team-full1">
+                <div class="team-full1">
+                    <div class="imgTeam">
+                        <img src="../asset/img/mancity.png" alt="">
+                    </div>
+                    <label for="">Manchester City</label>
+                    <i class="fa-solid fa-chart-simple" id="chart" style="color: red;"></i>
+                </div>
+            </div>
+            <div class="team-full1">
+                <div class="team-full1">
+                    <div class="imgTeam">
+                        <img src="../asset/img/paris.png" alt="">
+                    </div>
+                    <label for="">Paris</label>
+                    <i class="fa-solid fa-chart-simple" id="chart" style="color: blue;"></i>
+                </div>
+            </div>
+            <div class="team-full1">
+                <div class="team-full1">
+                    <div class="imgTeam">
+                        <img src="../asset/img/united.webp" alt="">
+                    </div>
+                    <label for="">Manchester United</label>
+                    <i class="fa-solid fa-chart-simple" id="chart" style="color: aqua;"></i>
+                </div>
+            </div>
+            <div class="team-full1">
+                <div class="team-full1">
+                    <div class="imgTeam">
+                        <img src="../asset/img/spur.png" alt="">
+                    </div>
+                    <label for="">Hot Spur</label>
+                    <i class="fa-solid fa-chart-simple" id="chart" style="color: gold;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="competitions">
+        <div class="slideMatch">
+            <img src="../asset/img/playerParis.png" alt="">
+            <div class="titleMatch">
+                <h1>
+                    Weekly Football Challenge
+                </h1>
+                <div class="matchPic">
+                    <img src="../asset/img/mancity.png" alt="">
+                </div>
+                <div class="vs">
+                    <h6>Vs</h6>
+                </div>
+                <div class="matchPic">
+                    <img src="../asset/img/united.webp" alt="">
+                </div>
+                <div class="dateLocation">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="txt">6:00 PM</span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="txt">Old Trafford</span>
+                </div>
+            </div>
+            <a href="./ticket.html"><button type="button" class="btn btn-outline-success"
+                style="float: right; width: 150px; margin: 9rem 1rem;">Buy Ticket</button></a>
+        </div>
+
+        <div class="filter">
+            <h5>Latest Matches</h5>
+            <div class="option">
+                <span>Filter: &nbsp; </span>
+                <select name="" id="" style="border: none">
+                    <option value="">Football</option>
+                    <option value="">Volleyball</option>
+                    <option value="">Basketball</option>
+                    <option value="">Tennis</option>
+                    <option value="">Running</option>
+                </select>
+                <select name="" id="" style="border: none;">
+                    <option value="">11 V 11</option>
+                    <option value="">10 V 10</option>
+                    <option value="">8 V 8 </option>
+                    <option value="">6 V 6</option>
+                    <option value="">5 V 5</option>
+                </select>
+                <select name="" id="" style="border: none">
+                    <option value="">England</option>
+                    <option value="">London</option>
+                    <option value="">Paris</option>
+                    <option value="">Cambodia</option>
+                    <option value="">Spain</option>
+                </select>
+            </div>
+            <div class="view">
+                <h6>View All</h6>
+            </div>
+            <div class="matchLatest">
+                <div class="m">
+                    <img src="../asset/img/realmadrid.png" alt="">
+                </div>
+                <h6>Real Madrid</h6>
+                <h6>Vs</h6>
+                <div class="m">
+                    <img src="../asset/img/paris.png" alt="">
+                </div>
+                <h6>Paris</h6>
+                <div class="location">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="txt">6:00 PM</span>
+
+                    <i class="fa-solid fa-location-dot" id="locationDot"></i>
+                    <span id="txt">Old Trafford</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h6>View detail <i class="fa-solid fa-arrow-right"></i></h6>
+            </div>
+            <div class="matchLatest">
+                <div class="m">
+                    <img src="../asset/img/liverpool.png" alt="">
+                </div>
+                <h6>T-Liverpool</h6>
+                <h6>Vs</h6>
+                <div class="m">
+                    <img src="../asset/img/manich.jpg" alt="">
+                </div>
+                <h6>Manich</h6>
+                <div class="location">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="txt">6:00 PM</span>
+
+                    <i class="fa-solid fa-location-dot" id="locationDot"></i>
+                    <span id="txt">Old Trafford</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h6>View detail <i class="fa-solid fa-arrow-right"></i></h6>
+            </div>
+
+            <div class="matchLatest">
+                <div class="m">
+                    <img src="../asset/img/spur.png" alt="">
+                </div>
+                <h6>Tottemham</h6>
+                <h6>Vs</h6>
+                <div class="m">
+                    <img src="../asset/img/mancity.png" alt="">
+                </div>
+                <h6>M-city</h6>
+                <div class="location">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="txt">6:00 PM</span>
+
+                    <i class="fa-solid fa-location-dot" id="locationDot"></i>
+                    <span id="txt">Old Trafford</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h6>View detail <i class="fa-solid fa-arrow-right"></i></h6>
+            </div>
+            <div class="matchLatest">
+                <div class="m">
+                    <img src="../asset/img/mancity.png" alt="">
+                </div>
+                <h6>Man City</h6>
+                <h6>Vs</h6>
+                <div class="m">
+                    <img src="../asset/img/united.webp" alt="">
+                </div>
+                <h6>Man United</h6>
+                <div class="location">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="txt1">6:00 PM</span>
+
+                    <i class="fa-solid fa-location-dot" id="locationDot"></i>
+                    <span id="txt1">Old Trafford</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h6>View detail <i class="fa-solid fa-arrow-right"></i></h6>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="lastPro">
+        <div class="trand">
+            <h2>Trending Now</h2>
+            <i class="fa-solid fa-arrow-right fa-2xs" style="color: #2a511f;"></i>
+            <div class="tranPro">
+                <img src="../asset/img/ronaldo.jpg" alt="">
+            </div>
+            <h5>Cristiano Ronaldo</h5>
+            <p>
+                <i class="fa-solid fa-bolt" style="color: yellow;"></i> 300 Goals
+            </p>
+            <div class="viewPro">
+                <h6>View Profile</h6>
+            </div>
+        </div>
+        <div class="game">
+            <h1>Create Games</h1>
+            <form action="">
+                <select name="Game Type" id=""
+                    style="width: 80%; height: 2rem; margin-left: 10%; outline: none; border: none;">
+                    <option value="" disabled selected hidden style="opacity: .5; font-size: 10px;"><span
+                            style="font-size: 10px;">Game Type</span></option>
+                    <option value="">Football</option>
+                    <option value="">Voleyball</option>
+                    <option value="">Basketball</option>
+                    <option value="">Running</option>
+                    <option value="">Swimming</option>
+                </select>
+                <div class="line">
+
+                </div>
+                <select name="Game Type" id=""
+                    style="width: 80%; height: 2rem; margin-left: 10%; outline: none; border: none; margin-top: 1rem;">
+                    <option value="" disabled selected hidden style="opacity: .5; font-size: 10px;"><span
+                            style="font-size: 10px;">Select Ground</span></option>
+                    <option value="">Old Trafford</option>
+                    <option value="">Olypic</option>
+                    <option value="">Morodok</option>
+                    <option value="">Mancity</option>
+                    <option value="">Villa</option>
+                </select>
+                <div class="line">
+
+                </div>
+                <select name="Game Type" id=""
+                    style="width: 80%; height: 2rem; margin-left: 10%; outline: none; border: none; margin-top: 1rem;">
+                    <option value="" disabled selected hidden style="opacity: .5; font-size: 10px;"><span
+                            style="font-size: 10px;">Select Location</span></option>
+                    <option value="">London</option>
+                    <option value="">France</option>
+                    <option value="">England</option>
+                    <option value="">Cambodia</option>
+                    <option value="">America</option>
+                </select>
+                <div class="line">
+
+                </div>
+                <input type="date" name="" id=""
+                    style="margin-top: 1rem; width: 80%; margin-left: 10%; outline: none; border:none;">
+                <div class="line">
+
+                </div>
+                <input type="text" min="1" max="100" placeholder="Number of players"
+                    style="width: 80%; height: 2rem; margin-left: 10%; outline: none; border: none; margin-top: 1rem;">
+                <div class="line">
+
+                </div>
+                <button type="submit"
+                    style="width: 80%; height: 2rem; margin-left: 10%; background-color: green; border-radius: 5px; margin-top: 1rem; outline: none; border: none; color: white;">Create
+                    Now</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../asset/javascript/index.js"></script>
+<script src="../asset/javascript/football.js"></script>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="../asset/img/premieleague.png" />
+  <link rel="stylesheet" href="../asset/css/tickets.css" />
+  <link rel="stylesheet" href="../asset/css/index.css">
+  <title>Football Admin</title>
+</head>
+<style>
+    #chart{
+        width: 90%;
+        height: 40rem;
+        /* background-color: blue; */
+        float: left;
+        margin-left: 8rem;
+    }
+    .barChart{
+      width: 90%;
+      margin-left: 8rem;
+      height: 20rem;
+      float: left;
+      /* background-color: red; */
+      margin-top: -4rem;
+    }
+    .barChart .chart1{
+      width: 47%;
+      height: 100%;
+      float: left;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+    .barChart .chart2{
+      width: 47%;
+      height: 100%;
+      float: left;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+
+
+    /* responsive */
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #chart{
+        height: 35rem;
+        margin-left: 1rem;
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+    .barChart{
+      width: 90%;
+      margin-left: 1rem;
+      height: 20rem;
+      float: left;
+      background-color: red;
+      margin-top: -4rem;
+      overflow: hidden;
+    }
+    .barChart .chart1{
+      width: 45%;
+      height: 100%;
+      float: left;
+      background-color: blue;
+      margin-left: 1rem;
+    }
+    .barChart .chart2{
+      width: 47%;
+      height: 100%;
+      float: left;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+}
+  
+  
+  /*  Tablets, Ipads */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    #chart{
+        height: 35rem;
+        margin-left: 1rem;
+        margin-top: 5rem;
+        overflow: hidden;
+    }
+    .barChart{
+      width: 90%;
+      margin-left: 1rem;
+      height: auto;
+      float: none;
+      /* background-color: red; */
+      margin-top: -4rem;
+      overflow: hidden;
+    }
+    .barChart .chart1{
+      width: 90%;
+      height: 100%;
+      float: none;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+    .barChart .chart2{
+      width: 90%;
+      height: 100%;
+      float: none;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+  }
+  
+  /* Tablets Ipads portrait mode */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #chart{
+        height: 35rem;
+        margin-left: 1rem;
+        margin-top: 5rem;
+        overflow: hidden;
+    }
+    .barChart{
+      width: 90%;
+      margin-left: 1rem;
+      height: auto;
+      float: none;
+      /* background-color: red; */
+      margin-top: -4rem;
+      overflow: hidden;
+    }
+    .barChart .chart1{
+      width: 90%;
+      height: 100%;
+      float: none;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+    .barChart .chart2{
+      width: 90%;
+      height: 100%;
+      float: none;
+      /* background-color: blue; */
+      margin-left: 1rem;
+    }
+  }
+  
+  /*  Laptops and Desktops */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+      
+  
+  }
+  
+  /* Large screens */
+  
+  @media (min-width: 1281px) {
+    
+  }
+
+
+
+</style>
+
+<body>
+  <div class="container-header" id="headerChange">
+    <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+    <div class="menuBar">
+      <img src="../asset/img/profile.jpg" alt="">
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="./football.html" id="firstItem" style="color: #212121; font-weight: 600;">Matches</a>
+        </li>
+        <li>
+          <a href="./ticket.html" style="color: #212121; font-weight: 600;">Tickets</a>
+        </li>
+        <li>
+          <a href="./statistic.html" style="color: green; font-weight: 600;">Statistic</a>
+        </li>
+        <li>
+          <a href="./players.html" style="color: #212121; font-weight: 600;">Players</a>
+        </li>
+      </ul>
+    </div>
+    <div class="searchBar">
+      <input type="input" id="searchInput" placeholder="Search matches" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="informationBar">
+      <i class="fa-regular fa-bell"></i>
+      <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <a href="./followers.html"><i class="fa-regular fa-heart"></i></a>
+      <div class="profile">
+        <img src="../asset/img/profile.jpg" alt="" id="imgChange" />
+      </div>
+      <label for="" id="nameChange">
+        Lay Satya <br />
+        <span>Football Player</span>
+      </label>
+      <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+      <div class="subLogin" id="subLoginShow">
+        <ul id="profileShow">
+          <li class="log">
+            <div class="profile1" id="switchAcc">
+              <img src="../asset/img/nha.jpg" alt="" id="pic1" />
+            </div>
+            <label for="" id="nameChange1">
+              Lay Sopanha <br />
+              <!-- <span id="playerChange">Football Player</span> -->
+            </label>
+          </li>
+          <li class="log">
+            <div class="profile2">
+              <img src="../asset/img/pich.jpg" alt="" id="pic2" />
+            </div>
+            <label for="" id="nameChange2">
+              Narin Pich <br />
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+          <li class="log">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <label for="" id="nameChange2">
+              Log Out <br />
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- slibar -->
+
+  <div class="sliBar" id="barShow">
+    <div class="line"></div>
+    <a href="../index.html">
+      <div class="icon" id="firstIcon">
+        <i class="fa-solid fa-gauge" style="color: #212121 !important;"></i> <span style="color: #212121;">Dash</span>
+      </div>
+    </a>
+    <a href="./users.html">
+      <div class="icon">
+        <i class="fa-solid fa-user-group" style="color: #212121;"></i> <span style="color: #212121;"> Users</span>
+      </div>
+    </a>
+    <a href="./statistic.html">
+      <div class="icon">
+        <i class="fa-solid fa-chart-simple" style="color: green;"></i> <span style="color: green;">Charts</span>
+      </div>
+    </a>
+
+    <div class="line"></div>
+    <a href="./football.html">
+      <div class="icon-soccer" id="firstIcon-soccer">
+        <i class="fa-solid fa-futbol" style="color: #212121;"></i> <span style="color: #212121;">Match</span>
+      </div>
+    </a>
+    <a href="./club.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-kaaba" style="color: #212121;" ></i> <span style="color: #212121;">Clubs</span>
+      </div>
+    </a>
+    <div class="icon-soccer">
+      <i class="fa-solid fa-sun" onclick="myModes()" style="color: #212121;"></i> <span onclick="myModes()" style="color: #212121;">Modes</span>
+    </div>
+    <a href="./setting.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-gears" style="color: #212121;"></i> <span style="color: #212121;">Setting</span>
+      </div>
+    </a>
+  </div>
+  <div class="marquee">
+    <div class="marquee__inner">
+      <p class="marquee__line">Charts Fans</p>
+      <p class="marquee__line"></p>
+    </div>
+  </div>
+
+  <div class="barChart">
+    <div class="chart1">
+
+    </div>
+    <div class="chart2">
+
+    </div>
+  </div>
+  <div id="chart">
+
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.44.2/apexcharts.min.js"></script>
+<script src="../asset/javascript/index.js"></script>
+<script src="../asset/javascript/statistic.js"></script>
+</html>

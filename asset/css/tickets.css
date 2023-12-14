@@ -1,0 +1,953 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container-header {
+    width: 100%;
+    height: 80px;
+    background-color: #ffff;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+.container-header .menuBar{
+    width: 4%;
+    /* background-color: blue; */
+    float: left;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 1rem 1rem;
+}
+.container-header .menuBar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-header .menuBar .fa-bars {
+    font-size: 28px;
+    opacity: .6;
+}
+
+.container-header .menu {
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-left: 1px;
+    /* background-color: red; */
+}
+
+.container-header .menu ul {
+    list-style-type: none;
+}
+
+.container-header .menu ul li {
+    float: left;
+}
+
+.container-header .menu ul li a {
+    display: block;
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: .6;
+    margin-top: 11px;
+    transition: .5s;
+}
+
+/* .container-header .menu ul li a:hover{
+    transform: scale(1.1);
+} */
+.container-header .menu ul li a::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 4px;
+    border-radius: 8px;
+    background-color: green;
+    display: none;
+    top: 0;
+    transition: .5s;
+}
+
+.container-header .menu ul li:first-child {
+    color: green;
+    font-weight: bold;
+}
+
+.container-header .menu ul li a:hover::after {
+    display: block;
+}
+
+.container-header .menu ul li a:focus {
+    color: green;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.container-header .searchBar {
+    width: 35%;
+    height: 100%;
+    /* background-color: red; */
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header .searchBar #searchInput {
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid grey;
+    font-size: 15px;
+    outline: none;
+    opacity: .6;
+}
+
+.container-header .searchBar #searchInput:focus {
+    border: 1px solid green;
+}
+
+::placeholder {
+    padding: 20px;
+}
+
+.fa-magnifying-glass {
+    margin-left: -40px;
+}
+
+.container-header .informationBar {
+    width: 27%;
+    height: 100%;
+    /* background-color: red; */
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-header .informationBar .fa-bell,
+.fa-envelope,
+.fa-heart {
+    margin-left: 15px;
+    font-size: 20px;
+    opacity: .7;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container-header .informationBar .fa-bell:hover,
+.fa-envelope:hover,
+.fa-heart:hover {
+    transform: scale(1.1);
+    color: green;
+}
+
+.fa-bell::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.container-header .informationBar .profile {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.container-header .informationBar .profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container-header .informationBar label {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.container-header .informationBar label span {
+    font-size: 13px;
+    opacity: .8;
+}
+
+.fa-caret-down {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.subLogin {
+    width: 13rem;
+    height: 0rem;
+    background-color: white;
+    position: fixed;
+    border-radius: 10px;
+    right: 0;
+    top: 5rem;
+    z-index: 1;
+    transform: translateX(-1rem);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.subLogin ul {
+    list-style-type: none;
+    display: none;
+    cursor: pointer;
+}
+
+.subLogin ul li {
+    float: none;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 11rem;
+    height: 60px;
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subLogin ul li .profile1 {
+    width: 3rem;
+    height: 3rem;
+    background-color: gold;
+    border-radius: 50%;
+    float: left;
+}
+
+.subLogin ul li .profile1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.subLogin ul li .profile2 {
+    width: 3rem;
+    height: 3rem;
+    background-color: gold;
+    border-radius: 50%;
+    float: left;
+}
+
+.subLogin ul li .profile2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#nameChange1 {
+    font-size: 15px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+
+.sliBar {
+    width: 6%;
+    height: 47rem;
+    background-color: white;
+    float: left;
+    position: fixed;
+    margin-top: 5rem;
+    transition: .5s;
+    z-index: 2;
+}
+.sliBar:hover{
+    width: 15rem;
+}
+.sliBar:hover .icon span{
+    display: block;
+}
+
+.sliBar .icon {
+    width: 100%;
+    height: 4rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.sliBar a {
+    color: #212121;
+    opacity: .8;
+    text-decoration: none;
+}
+
+.sliBar .icon a:focus {
+    color: green;
+    font-weight: bold;
+}
+
+.sliBar #firstIcon {
+    margin-top: 1rem;
+}
+.sliBar .icon span{
+    opacity: .8;
+    font-size: 22px;
+    position: relative;
+    padding: 10px;
+    display: none;
+    transition: .5s;
+    color: #212121;
+}
+.sliBar .icon:hover{
+    background-color: dodgerblue;
+    border-radius: 3px;
+}
+.sliBar .icon .fa-gauge,
+.fa-user-group,
+.fa-chart-simple {
+    font-size: 23px;
+    cursor: pointer;
+    opacity: .7;
+    color: #212121;
+}
+
+.container-header .informationBar .fa-gauge::after,
+.fa-user-group::after,
+.fa-chart-simple::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 34px;
+    border-radius: 5px;
+    background-color: green;
+    left: 0;
+    display: none;
+    transform: translateY(-30px);
+    transition: .5s;
+}
+
+.container-header .informationBar .fa-gauge:hover::after,
+.fa-user-group:hover::after,
+.fa-chart-simple:hover::after {
+    display: block;
+}
+
+.sliBar .line {
+    width: 50%;
+    height: .1px;
+    background-color: black;
+    opacity: .5;
+    margin-left: 25%;
+    margin-top: 1rem;
+}
+
+.sliBar .icon-soccer {
+    width: 100%;
+    height: 4rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#firstIcon-soccer {
+    margin-top: 1rem;
+}
+
+.sliBar .icon-soccer .fa-futbol,
+.fa-kaaba,
+.fa-sun,
+.fa-gears {
+    font-size: 23px;
+    opacity: .7;
+    cursor: pointer;
+    color: #212121;
+}
+
+.sliBar .icon-soccer .fa-futbol::after,
+.fa-kaaba::after,
+.fa-sun::after,
+.fa-gears::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: green;
+    left: 0;
+    display: none;
+    transform: translateY(-35px);
+    transition: .5s;
+}
+
+.sliBar .icon-soccer .fa-futbol:hover::after,
+.fa-kaaba:hover::after,
+.fa-sun:hover::after,
+.fa-gears:hover::after {
+    display: block;
+}
+
+.sliBar  a {
+    color: #212121;
+    opacity: .8;
+    text-decoration: none;
+    
+}
+
+.sliBar .icon-soccer a:focus {
+    color: green;
+    font-weight: bold;
+}
+.sliBar .icon-soccer span{
+    opacity: .8;
+    font-size: 22px;
+    position: relative;
+    padding: 10px;
+    display: none;
+    transition: .5s;
+    color: #212121;
+}
+.sliBar .icon-soccer:hover{
+    background-color: dodgerblue;
+    border-radius: 3px;
+}
+.sliBar:hover .icon-soccer span{
+    display: block;
+}
+.marquee {
+    border-radius: 10px;
+    margin: 6rem 5rem;
+    position: relative;
+    left: 5rem;
+    float: left;
+    overflow: hidden;
+    font-family: "Pridi", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    width: 85%;
+    text-transform: uppercase;
+    background-color: white;
+    
+}
+
+.marquee__inner {
+    display: flex;
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 10px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+    from {
+        transform: translateX(-27%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+.card{
+    float: left;
+    width: 25rem;
+    height: 20rem;
+    margin-left: 3rem;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: -3rem;
+    transition: .5s;
+}
+.card img{
+    height: 100%;
+    transition: .5s;
+    border-radius: 15px 15px 0px 0px;
+}
+.card img:hover{
+    transform: scale(.95);
+}
+.card::before{
+    content: '';
+    position: absolute;
+    background-color: #a5a5a5;
+    width: 100%;
+    height: 80%;
+    opacity: .5;
+    display: none;
+    transition: .5s;
+    z-index: 1;
+}
+.card::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: 'Book Ticket';
+    color: white;
+    position: absolute;
+    width: 7rem;
+    height: 3rem;
+    margin: 10rem 9rem;
+    background:linear-gradient(to right , green , lightgreen);
+    border-radius: 10px;
+    z-index: 2;
+    display: none;
+    font-size: 17px;
+    transition: .5;
+    padding: 12px
+}
+.card:hover::after{
+    display: block;
+}
+.card:hover:before{
+    display: block;
+}
+.card-text{
+    text-align: center;
+    font-size: 25px;
+    color: darkgoldenrod;
+    transition: .3s;
+    z-index: -1;
+    font-weight: bold;
+}
+.card-text:hover{
+    color: blue;
+}
+/* .seat{
+    width: 85%;
+    margin-left: 10rem;
+    margin-top: -3rem;
+    float: left;
+    border-radius: 10px;
+    background-color: white;;
+} */
+
+
+
+.booking-form {
+    width: 80rem;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fff;
+    float: left;
+    border-radius: 10px;
+    margin: 4rem 10rem;
+  }
+  
+  div.elem-group {
+    margin: 20px 10px;
+    width: 40%;
+    float: left;
+  }
+  
+  div.elem-group.inlined {
+    width: 42%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+  }
+  
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+  }
+  select{
+    margin-left: -20px;
+    height: 55px;
+  }
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    height: 50px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 12px;
+    margin: .5rem 2rem;
+  }
+  
+  button:hover {
+    background: #333;
+  }
+
+
+
+  /* responsive */
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #stCard{
+        transform: translateX(-9rem);
+    }
+    .card{
+        width: 95%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .card-text{
+        text-align: center;
+        font-size: 25px;
+        color: darkgoldenrod;
+        transition: .3s;
+        z-index: -1;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 4rem 1rem;
+      }
+      
+      div.elem-group {
+        margin: 20px 10px;
+        width: 90%;
+        float: none;
+      }
+      
+      div.elem-group.inlined {
+        width: 95%;
+        display: inline-block;
+        float: none;
+        margin-left: 1%;
+      }
+      select{
+        margin-left: 0px;
+      }
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+      
+      button {
+        margin: .5rem 1rem;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+}
+
+
+/*  Tablets, Ipads */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #stCard{
+        transform: translateX(-9rem);
+    }
+    .card{
+        width: 95%;
+        height: auto;
+        margin-left: 1rem;
+        margin-top: 3rem;
+    }
+    .card::after{
+        margin: 10rem 10rem;
+    }
+    .card::before{
+        height: 90%;
+    }
+    .card-text{
+        text-align: center;
+        font-size: 25px;
+        color: darkgoldenrod;
+        transition: .3s;
+        z-index: -1;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 4rem 1rem;
+      }
+      
+      div.elem-group {
+        margin: 20px 10px;
+        width: 90%;
+        float: none;
+      }
+      
+      div.elem-group.inlined {
+        width: 95%;
+        display: inline-block;
+        float: none;
+        margin-left: 1%;
+      }
+      select{
+        margin-left: 0px;
+      }
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+      
+      button {
+        margin: .5rem 1rem;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+}
+
+/* Tablets Ipads portrait mode */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #stCard{
+        transform: translateX(-9rem);
+    }
+    .card{
+        width: 95%;
+        height: auto;
+        margin-left: 1rem;
+        margin-top: 3rem;
+        overflow: hidden;
+    }
+    .card::after{
+        margin: 15rem 25rem;
+    }
+    .card::before{
+        height: 90%;
+    }
+    .card-text{
+        text-align: center;
+        font-size: 25px;
+        color: darkgoldenrod;
+        transition: .3s;
+        z-index: -1;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 4rem 1rem;
+      }
+      
+      div.elem-group {
+        margin: 20px 10px;
+        width: 90%;
+        float: none;
+      }
+      
+      div.elem-group.inlined {
+        width: 95%;
+        display: inline-block;
+        float: none;
+        margin-left: 1%;
+      }
+      select{
+        margin-left: 0px;
+      }
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+      
+      button {
+        margin: .5rem 1rem;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+}
+
+/*  Laptops and Desktops */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #stCard{
+        transform: translateX(-9rem);
+    }
+    .card{
+        width: 95%;
+        height: auto;
+        margin-left: 1rem;
+        margin-top: 3rem;
+        overflow: hidden;
+    }
+    .card::after{
+        margin: 20rem 30rem;
+    }
+    .card::before{
+        height: 90%;
+    }
+    .card-text{
+        text-align: center;
+        font-size: 25px;
+        color: darkgoldenrod;
+        transition: .3s;
+        z-index: -1;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 4rem 1rem;
+      }
+      
+      div.elem-group {
+        margin: 20px 10px;
+        width: 90%;
+        float: none;
+      }
+      
+      div.elem-group.inlined {
+        width: 95%;
+        display: inline-block;
+        float: none;
+        margin-left: 1%;
+      }
+      select{
+        margin-left: 0px;
+      }
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+      
+      button {
+        margin: .5rem 1rem;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+}
+
+/* Large screens */
+
+@media (min-width: 1281px) and (max-width: 1455px) {
+    #stCard{
+        transform: translateX(-3rem);
+    }
+    .card{
+        width: 40%;
+        float: left;
+        height: 20rem;
+        margin-left: -1rem;
+        margin-top: 3rem;
+        overflow: hidden;
+    }
+    #lsCard{
+        width: 80%;
+        margin-left: 7rem;
+        float: left;
+        height: auto;
+    }
+    #lsCard::after{
+        margin: 15rem 30rem;
+    }
+    .card::after{
+        margin: 10rem 13rem;
+    }
+    .card::before{
+        height: 90%;
+    }
+    .card-text{
+        text-align: center;
+        font-size: 25px;
+        color: darkgoldenrod;
+        transition: .3s;
+        z-index: -1;
+        font-weight: bold;
+    }
+
+    .booking-form {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        margin: 4rem 7rem;
+      }
+      
+      div.elem-group {
+        margin: 20px 10px;
+        width: 90%;
+        float: none;
+      }
+      
+      div.elem-group.inlined {
+        width: 95%;
+        display: inline-block;
+        float: none;
+        margin-left: 1%;
+      }
+      select{
+        margin-left: 0px;
+      }
+      div.elem-group.inlined input {
+        width: 95%;
+        display: inline-block;
+      }
+      
+      button {
+        margin: .5rem 1rem;
+      }
+      
+      button:hover {
+        background: #333;
+      }
+}

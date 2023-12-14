@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" />
+    <link rel="shortcut icon" type="image/x-icon" href="../asset/img/premieleague.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../asset/css/players.css" />
+    <link rel="stylesheet" href="../asset/css/index.css">
+    <title>Football Admin</title>
+</head>
+
+<body>
+    <div class="container-header" id="headerChange">
+        <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+        <div class="menuBar">
+            <img src="../asset/img/profile.jpg" alt="" />
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="./football.html" id="firstItem" style="color: #212122;">Matches</a>
+                </li>
+                <li>
+                    <a href="./ticket.html"  style="color: #212122;">Tickets</a>
+                </li>
+                <li>
+                    <a href="./statistic.html"  style="color: #212122;">Statistic</a>
+                </li>
+                <li>
+                    <a href="./players.html"  style="color: green; font-weight: 600;">Players</a>
+                </li>
+            </ul>
+        </div>
+        <div class="searchBar">
+            <input type="input" id="searchInput" placeholder="Search matches" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="informationBar">
+            <i class="fa-regular fa-bell"></i>
+            <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="./followers.html"><i class="fa-regular fa-heart"></i></a>
+            <div class="profile">
+                <img src="../asset/img/profile.jpg" alt="" id="imgChange" />
+            </div>
+            <label for="" id="nameChange">
+                Lay Satya <br />
+                <span>Football Player</span>
+            </label>
+            <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+            <div class="subLogin" id="subLoginShow">
+                <ul id="profileShow">
+                    <li class="log">
+                        <div class="profile1" id="switchAcc">
+                            <img src="../asset/img/nha.jpg" alt="" id="pic1" />
+                        </div>
+                        <label for="" id="nameChange1">
+                            Lay Sopanha <br />
+                            <!-- <span id="playerChange">Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <div class="profile2">
+                            <img src="../asset/img/pich.jpg" alt="" id="pic2" />
+                        </div>
+                        <label for="" id="nameChange2">
+                            Narin Pich <br />
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                    <li class="log">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <label for="" id="nameChange2">
+                            Log Out <br />
+                            <!-- <span>Football Player</span> -->
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- slibar -->
+
+    <div class="sliBar" id="barShow">
+        <div class="line"></div>
+        <a href="../index.html">
+            <div class="icon" id="firstIcon">
+                <i class="fa-solid fa-gauge"></i> <span>Dash</span>
+            </div>
+        </a>
+        <a href="./users.html">
+            <div class="icon">
+                <i class="fa-solid fa-user-group"></i> <span>Users</span>
+            </div>
+        </a>
+        <a href="./statistic.html">
+            <div class="icon">
+                <i class="fa-solid fa-chart-simple" style="color: #212122 important!;"></i> <span >Charts</span>
+            </div>
+        </a>
+
+        <div class="line"></div>
+        <a href="./football.html">
+            <div class="icon-soccer" id="firstIcon-soccer">
+                <i class="fa-solid fa-futbol"></i> <span>Match</span>
+            </div>
+        </a>
+        <a href="./club.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-kaaba"></i> <span>Clubs</span>
+            </div>
+        </a>
+        <div class="icon-soccer">
+            <i class="fa-solid fa-sun" onclick="myModes()"></i> <span onclick="myModes()">Modes</span>
+        </div>
+        <a href="./setting.html">
+            <div class="icon-soccer">
+                <i class="fa-solid fa-gears"></i> <span>Setting</span>
+            </div>
+        </a>
+    </div>
+    <div class="marquee">
+        <div class="marquee__inner">
+            <p class="marquee__line">Winner Team Players</p>
+            <p class="marquee__line"></p>
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/1.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Stefan Ortega Moreno</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C2.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Enderson</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C3.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Scott Carson</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C19.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Jack</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/C4.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Kyle Walker</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C5.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Ruben Dias</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C6.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">James Mcatee</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C7.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Wilson</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/C8.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Jonh Stone</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C9.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Josko</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C10.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Matio Kovacic</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C11.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Rodrigo</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/C12.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Kelven Debrune</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C13.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Bernado Silva</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C14.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Maximo Peron</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C15.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Halland</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/C16.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Phil Foden</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C17.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Josko Gvardiol</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C18.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Oscar Bobb</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C20.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Julian Alvarez</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" id="firstCard" style="width: 18rem">
+        <img src="../asset/img/C21.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Jeremy Doku</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C22.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Joulen Kamada</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C23.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Joshuo Wilson</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+    <div class="card" style="width: 18rem">
+        <img src="../asset/img/C24.png" class="card-img-top" alt="" />
+        <div class="card-body">
+            <h5 class="card-title">Averez Silma</h5>
+            <p class="card-text">
+                Manchester City Is The Primier League Champion In England.I
+            </p>
+            
+        </div>
+    </div>
+</body>
+<script src="../asset/javascript/index.js"></script>
+<script src="../asset/javascript/players.js"></script>
+</html>

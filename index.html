@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+  <link rel="shortcut icon" type="image/x-icon" href="./asset/img/premieleague.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./asset/css/index.css">
+  <title>Football Admin</title>
+</head>
+
+<body>
+  <div class="container-header" id="headerChange">
+    <i class="fa fa-bars" aria-hidden="true" id="bar" onclick="Bar()"></i>
+    <!-- <i class="fa-solid fa-ticket"></i>
+    <i class="fa-solid fa-person"></i> -->
+    <div class="menuBar">
+      <img src="./asset/img/profile.jpg" alt="">
+    </div>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="./football/football.html">Matches</a>
+        </li>
+        <li>
+          <a href="./football/ticket.html">Tickets</a>
+        </li>
+        <li>
+          <a href="./football/statistic.html">Statistic</a>
+        </li>
+        <li>
+          <a href="./football/players.html">Players</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="searchBar">
+
+      <input type="input" id="searchInput" placeholder="Search matches">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="informationBar">
+      <i class="fa-regular fa-bell"></i>
+      <a href="mailto: laysatya08@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <a href="./football/followers.html"><i class="fa-regular fa-heart"></i></a>
+      <div class="profile">
+        <img src="./asset/img/profile.jpg" alt="" id="imgChange">
+      </div>
+      <label for="" id="nameChange"> Lay Satya <br>
+        <span>Football Player</span>
+      </label>
+      <i class="fa-solid fa-caret-down" id="loginBtn"></i>
+      <div class="subLogin" id="subLoginShow">
+        <ul id="profileShow">
+          <li class="log">
+            <div class="profile1" id="switchAcc">
+              <img src="./asset/img/nha.jpg" alt="" id="pic1">
+            </div>
+            <label for="" id="nameChange1"> Lay Sopanha <br>
+              <!-- <span id="playerChange">Football Player</span> -->
+            </label>
+          </li>
+          <li class="log">
+            <div class="profile2">
+              <img src="./asset/img/pich.jpg" alt="" id="pic2">
+            </div>
+            <label for="" id="nameChange2"> Narin Pich <br>
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+          <li class="log">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <label for="" id="nameChange2"> Log Out <br>
+              <!-- <span>Football Player</span> -->
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- slibar -->
+
+  <div class="sliBar" id="barShow">
+    <div class="line">
+
+    </div>
+    <a href="./index.html" style="color: green">
+      <div class="icon" id="firstIcon">
+        <i class="fa-solid fa-gauge"></i> <span class="txt">Dashs</span>
+      </div>
+    </a>
+    <a href="./football/users.html">
+      <div class="icon">
+        <i class="fa-solid fa-user-group"></i> <span class="txt">Users</span>
+      </div>
+    </a>
+    <a href="./football/statistic.html">
+      <div class="icon">
+        <i class="fa-solid fa-chart-simple"></i> <span class="txt">Charts</span>
+      </div>
+    </a>
+
+    <div class="line"></div>
+    <a href="./football/football.html">
+      <div class="icon-soccer" id="firstIcon-soccer">
+        <i class="fa-solid fa-futbol"></i> <span class="txt">Match</span>
+      </div>
+    </a>
+    <a href="./football/club.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-kaaba"></i> <span class="txt">Clubs</span>
+      </div>
+    </a>
+    <div class="icon-soccer">
+      <i class="fa-solid fa-sun" onclick="myModes()"></i> <span onclick="myModes()" class="txt">Modes</span>
+    </div>
+    <a href="./football/setting.html">
+      <div class="icon-soccer">
+        <i class="fa-solid fa-gears"></i> <span class="txt">Setting</span>
+      </div>
+    </a>
+  </div>
+  <!-- <div class="header-dash">
+    <h2 style="font-family: 'koulen'; margin-top: 5px; font-weight: bold;"> <i class="fa-solid fa-house-chimney"></i> Dashboard </h2>
+  </div> -->
+  <div class="marquee">
+    <div class="marquee__inner">
+      <p class="marquee__line"><i class="fa-solid fa-house-chimney"></i> Dashboard</p>
+      <p class="marquee__line"></p>
+    </div>
+  </div>
+
+  <div class="data">
+    <a href="./football/users.html" style="color: #212121;">
+      <div class="data-c">
+        <i class="fa-solid fa-ellipsis"></i>
+        <div class="proData">
+          <img src="./asset/img/user-icon.png" alt="">
+        </div>
+        <h3>1.4M</h3>
+        <label for="">Total Users & followers</label>
+     </div>
+  </a>
+    <a href="./football/club.html" style="color: #212121;">
+      <div class="data-c">
+        <i class="fa-solid fa-ellipsis"></i>
+        <div class="proData">
+          <img src="./asset/img/premieleague.png" alt="">
+        </div>
+        <h3>20 Clubs</h3>
+        <label for="" id="rd-label">Total Clubs & Teams</label>
+      </div>
+  </a>
+    <a href="./football/ticket.html" style="color: #212121;">
+      <div class="data-c">
+        <i class="fa-solid fa-ellipsis"></i>
+        <div class="proData">
+          <img src="./asset/img/ticketIcon.png" alt="">
+        </div>
+        <h3>10K Tickets</h3>
+        <label for="" id="rd-label">Available 2K </label>
+      </div>
+  </a>
+  </div>
+  <div class="txtH6">
+    <h6>Top Player</h6>
+  </div>
+  <div class="txtH61">
+    <h6>Top Team</h6>
+  </div>
+
+  <div class="playerInformation">
+    <table class="table table-striped" style=" float: left; width: 30%; border:darkseagreen;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Player</th>
+          <th>Number</th>
+          <th>Score</th>
+          <th>Winrate%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Ronaldo</td>
+          <td>7</td>
+          <td>333</td>
+          <td>99.93%</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Messi</td>
+          <td>10</td>
+          <td>330</td>
+          <td>98.73%</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Halland</td>
+          <td>7</td>
+          <td>298</td>
+          <td>98.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Halland</td>
+          <td>7</td>
+          <td>298</td>
+          <td>98.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Neymar</td>
+          <td>11</td>
+          <td>200</td>
+          <td>98.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>M-bappe</td>
+          <td>7</td>
+          <td>298</td>
+          <td>96.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Debruyne</td>
+          <td>17</td>
+          <td>123</td>
+          <td>96.37%</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Kross</td>
+          <td>8</td>
+          <td>118</td>
+          <td>95.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Ramos</td>
+          <td>4</td>
+          <td>28</td>
+          <td>94.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Son</td>
+          <td>7</td>
+          <td>275</td>
+          <td>96.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Bruno</td>
+          <td>8</td>
+          <td>98</td>
+          <td>95.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Benzema</td>
+          <td>9</td>
+          <td>298</td>
+          <td>98.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Bale</td>
+          <td>11</td>
+          <td>89</td>
+          <td>94.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>Marcelo</td>
+          <td>5</td>
+          <td>65</td>
+          <td>93.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>Silva</td>
+          <td>15</td>
+          <td>68</td>
+          <td>91.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>Degea</td>
+          <td>1</td>
+          <td>1</td>
+          <td>96.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>Onana</td>
+          <td>25</td>
+          <td>177</td>
+          <td>95.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td>Raya</td>
+          <td>22</td>
+          <td>144</td>
+          <td>92.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td>Vandijk</td>
+          <td>15</td>
+          <td>168</td>
+          <td>94.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td>Nunez</td>
+          <td>9</td>
+          <td>120</td>
+          <td>90.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">20</th>
+          <td>Maguire</td>
+          <td>5</td>
+          <td>10</td>
+          <td>80.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">21</th>
+          <td>Jackson</td>
+          <td>7</td>
+          <td>69</td>
+          <td>92.67%</td>
+        </tr>
+        <tr>
+          <th scope="row">22</th>
+          <td>Salah</td>
+          <td>15</td>
+          <td>68</td>
+          <td>91.67%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="playerInformation1">
+
+    <table class="table table-hover" style=" float: left; width: 30%; border:darkseagreen; border-radius: 10px;">
+      <thead>
+        <tr>
+          <th colspan="25">Club</th>
+          <th>MP</th>
+          <th>W</th>
+          <th>D</th>
+          <th>L</th>
+          <th>GF</th>
+          <th>GA</th>
+          <th>GD</th>
+          <th colspan="20">Pts</th>
+          <th>Qualified</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/arsnal.png" alt=""></div> &nbsp; Arsenal
+          </td>
+          <td>15</td>
+          <td>11</td>
+          <td>3</td>
+          <td>1</td>
+          <td>33</td>
+          <td>14</td>
+          <td>19</td>
+          <td colspan="20">36</td>
+          <td colspan="10">
+            <div class="c">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/verpoool.png" alt=""></div> &nbsp; Liverpool
+          </td>
+          <td>15</td>
+          <td>10</td>
+          <td>4</td>
+          <td>1</td>
+          <td>34</td>
+          <td>14</td>
+          <td>20</td>
+          <td colspan="20">34</td>
+          <td colspan="10">
+            <div class="c">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/astonvela.png" alt=""></div> &nbsp; Aston Vela
+          </td>
+          <td>15</td>
+          <td>10</td>
+          <td>2</td>
+          <td>3</td>
+          <td>34</td>
+          <td>20</td>
+          <td>14</td>
+          <td colspan="20">32</td>
+          <td colspan="10">
+            <div class="c">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/4.png" alt=""></div> &nbsp; Man city
+          </td>
+          <td>15</td>
+          <td>9</td>
+          <td>3</td>
+          <td>3</td>
+          <td>36</td>
+          <td>17</td>
+          <td>19</td>
+          <td colspan="20">30</td>
+          <td colspan="10">
+            <div class="c">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/5.png" alt=""></div> &nbsp; Tottenham
+          </td>
+          <td>15</td>
+          <td>8</td>
+          <td>3</td>
+          <td>3</td>
+          <td>28</td>
+          <td>20</td>
+          <td>8</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/6.png" alt=""></div> &nbsp; Man United
+          </td>
+          <td>15</td>
+          <td>9</td>
+          <td>0</td>
+          <td>6</td>
+          <td>18</td>
+          <td>18</td>
+          <td>0</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+
+        <tr>
+          <th scope="row">7</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/7.png" alt=""></div> &nbsp;Newcastle
+          </td>
+          <td>15</td>
+          <td>8</td>
+          <td>2</td>
+          <td>4</td>
+          <td>32</td>
+          <td>14</td>
+          <td>18</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/8.png" alt=""></div> &nbsp; Brighton
+          </td>
+          <td>15</td>
+          <td>7</td>
+          <td>4</td>
+          <td>4</td>
+          <td>32</td>
+          <td>27</td>
+          <td>5</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/9.png" alt=""></div> &nbsp; West Ham
+          </td>
+          <td>15</td>
+          <td>6</td>
+          <td>3</td>
+          <td>5</td>
+          <td>24</td>
+          <td>24</td>
+          <td>0</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/10.png" alt=""></div> &nbsp; Chelsea
+          </td>
+          <td>15</td>
+          <td>5</td>
+          <td>4</td>
+          <td>6</td>
+          <td>26</td>
+          <td>24</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/11.png" alt=""></div> &nbsp; Brentford
+          </td>
+          <td>15</td>
+          <td>5</td>
+          <td>4</td>
+          <td>6</td>
+          <td>23</td>
+          <td>21</td>
+          <td>2</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/12.png" alt=""></div> &nbsp; Fulham
+          </td>
+          <td>15</td>
+          <td>1</td>
+          <td>2</td>
+          <td>18</td>
+          <td>10</td>
+          <td>8</td>
+          <td>-14</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/13.png" alt=""></div> &nbsp; Wolves
+          </td>
+          <td>15</td>
+          <td>1</td>
+          <td>3</td>
+          <td>10</td>
+          <td>19</td>
+          <td>-10</td>
+          <td>16</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/14.png" alt=""></div> &nbsp; Crystal Palace
+          </td>
+          <td>15</td>
+          <td>10</td>
+          <td>1</td>
+          <td>1</td>
+          <td>10</td>
+          <td>8</td>
+          <td>-11</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/15.png" alt=""></div> &nbsp; bournemouth
+          </td>
+          <td>15</td>
+          <td>8</td>
+          <td>1</td>
+          <td>7</td>
+          <td>16</td>
+          <td>13</td>
+          <td>-10</td>
+          <td colspan="20">27</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/16.png" alt=""></div> &nbsp; Nottm Forest
+          </td>
+          <td>15</td>
+          <td>3</td>
+          <td>4</td>
+          <td>8</td>
+          <td>16</td>
+          <td>27</td>
+          <td>-11</td>
+          <td colspan="20">13</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/17.png" alt=""></div> &nbsp; Luton Town
+          </td>
+          <td>15</td>
+          <td>2</td>
+          <td>3</td>
+          <td>10</td>
+          <td>16</td>
+          <td>30</td>
+          <td>-14</td>
+          <td colspan="20">9</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/18.png" alt=""></div> &nbsp; Everton
+          </td>
+          <td>15</td>
+          <td>5</td>
+          <td>2</td>
+          <td>7</td>
+          <td>15</td>
+          <td>20</td>
+          <td>-5</td>
+          <td colspan="20">7</td>
+          <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td colspan="24">
+            <div class="proClub"><img src="./asset/img/19.png" alt=""></div> &nbsp; Burnly
+          </td>
+          <td>15</td>
+          <td>2</td>
+          <td>1</td>
+          <td>12</td>
+          <td>15</td>
+          <td>33</td>
+          <td>-18</td>
+          <td colspan="20">7</td>
+          <td colspan="10">---</td>
+        </tr>
+        <th scope="row">20</th>
+        <td colspan="24">
+          <div class="proClub"><img src="./asset/img/20.png" alt=""></div> &nbsp; Sheffield United
+        </td>
+        <td>15</td>
+        <td>1</td>
+        <td>2</td>
+        <td>12</td>
+        <td>11</td>
+        <td>41</td>
+        <td>-30</td>
+        <td colspan="20">5</td>
+        <td colspan="10">---</td>
+        </tr>
+        <tr>
+          <th scope="row">---</th>
+          <td colspan="13"></td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td colspan="10">-</td>
+          <td colspan="15">---------</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+<script src="./asset/javascript/index.js"></script>
+<script src="./asset/javascript/index1.js"></script>
+
+</script>
+
+</html>
